@@ -1,13 +1,23 @@
 // import logo from './logo.svg';
-// import profileLogo from './Ved_Vadake_Photo.jpeg';
+import profileLogo from './Ved_Vadake_Photo.jpeg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Portfolio</p>
+        <p>Portfolio Resume</p>
       </header>
+      <section>
+        <nav className='App-Nav'>
+          <img src={profileLogo} className="App.logo" alt="logo"></img>
+          <h1>Ved Vadake</h1>
+          <button>Save the Resume</button>
+        </nav>
+        <article>
+          <h1>Resume</h1>
+        </article>
+      </section>
     </div>
   );
 }
