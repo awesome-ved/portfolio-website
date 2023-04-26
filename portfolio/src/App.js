@@ -4,6 +4,8 @@ import page2 from "./Ved_Vadake_Resume_page-0002.jpg";
 import profile from "./Ved_Vadake_Photo.jpeg";
 const PDF_URL = "./Ved_Vadake_Resume.pdf";
 function App() {
+
+
   const downloadFileAtURL=(url)=>{
     const fileName = url.split('/').pop();
     const aTag = document.createElement("a");
@@ -17,7 +19,7 @@ function App() {
     <div className="App">
       <header className='header'>
         <div className='header-portfolio-holder'>
-          <h1 className='header-portfolio-holder-text'>Portfolio</h1>
+          <h1 className='header-portfolio-holder-text'>Portfolio v1.0</h1>
         </div>
       </header>
       <div className='container'>
@@ -33,7 +35,7 @@ function App() {
                     <h2>Ved Vadake</h2>
                   </li>
                   <li class="mgd-sidebar__item">
-                  <button id="mgd-sideBaritem-save_button"onClick={()=>{downloadFileAtURL(PDF_URL)}}>Save the Resume</button>
+                  <button id="mgd-sideBaritem-save_button" onClick={()=>{downloadFileAtURL(PDF_URL)}}>Save My Resume</button>
                   </li>
                 </ul>
               </div>
@@ -42,18 +44,26 @@ function App() {
           <div className='page-doc_content'>
             <div className='page-doc_content-image_list'>
               <img src={page1} alt='page1' className='page-doc_content-pages' id='page1'></img>
+              <div className='page-doc_content-page_break'></div>
               <img src={page2} alt='page2' className='page-doc_content-pages' id='page2'></img>
             </div>
           </div>
         </div>
       </div>
       <footer className='footer'>
-        <p>Visit My <button className="linkedin">LinkedIN</button> or <button className="github">Github</button></p>
+        <p>
+          Visit My 
+          <button className="GOTOLINK LinkedIN" id='LinkedIn'>
+            <a class="link" href="https://www.linkedin.com/in/ved-vadake-/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </button> 
+          or 
+          <button className="GOTOLINK Github" id='Github'>
+            <a class="link" href="https://github.com/awesome-ved" target="_blank" rel="noreferrer">Github</a>
+          </button>
+        </p>
       </footer>
     </div>
   );
 }
-
-
 
 export default App;

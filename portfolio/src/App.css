@@ -39,13 +39,13 @@ body {
   }
 
   .header {
-    background: #000000;
+    background: #ffffff;
     border-bottom: 1px solid #ffffff;
     padding-top:1px;
     text-align: center;
     position: sticky;
     top: 0;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     z-index: 9999;
   }
 
@@ -105,6 +105,8 @@ body {
                 padding-top: 20px;
               }
 
+
+
               #mgd-sideBaritem-save_button{
                 height: 44px;
                 padding: 10px;
@@ -113,6 +115,10 @@ body {
                 background-color: #000000;
                 color: #ffffff;
                 border: #ffffff;
+              }
+
+              #mgd-sideBaritem-save_button:hover{
+                box-shadow: 2px 2px 20px 0px #c2c2c2;
               }
 
       .page-doc_content{
@@ -132,12 +138,40 @@ body {
           white-space: nowrap;
           box-shadow:  2px 2px 20px 0px #c2c2c2;
           border: solid #dbdbdb;
-          margin: 0 auto;
+          margin-left: 13.5vh;
         }
 
   .footer {
-    background-color: #000000;
+    background-color: #ffffff;
     padding: 0.5%;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
   }
+    .GOTOLINK{
+      margin-left: 10px;
+      margin-right: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border: #ffffff;
+      color:#ffffff;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .GOTOLINK:hover{
+      box-shadow: 2px 2px 20px 0px #c2c2c2;
+    }
+
+      .GOTOLINK.LinkedIN{
+        background-color: #0a66c2;
+      }
+
+      .GOTOLINK.Github{
+        background-color: #000000;
+      }
+
+        .link{
+          height: 100%;
+          width: 100%;
+          color: white;
+          text-decoration: none;
+        }
