@@ -1,8 +1,7 @@
 import './App.css';
-import page1 from "./Ved_Vadake_Resume_page-0001.jpg";
-import page2 from "./Ved_Vadake_Resume_page-0002.jpg";
-import profile from "./Ved_Vadake_Photo.jpeg";
-const PDF_URL = "./Ved_Vadake_Resume.pdf";
+import strings from './res/strings'
+import images from './res/images'
+const PDF_URL = "./pdf/Ved_Vadake_Resume.pdf";
 function App() {
 
 
@@ -19,7 +18,7 @@ function App() {
     <div className="App">
       <header className='header'>
         <div className='header-portfolio-holder'>
-          <h1 className='header-portfolio-holder-text'>Portfolio v1.0</h1>
+          <h1 className='header-portfolio-holder-text'>{strings.heading}</h1>
         </div>
       </header>
       <div className='container'>
@@ -29,13 +28,13 @@ function App() {
               <div class="mgd-sidebar__group">
                 <ul class="mgd-sidebar__body">
                   <li class="mgd-sidebar__item">
-                    <img src={profile} alt='profile_image' className='prof_img'></img>
+                    <img src={images.profile} alt='profile_image' className='prof_img'></img>
                   </li>
                   <li class="mgd-sidebar__item">
-                    <h2>Ved Vadake</h2>
+                    <h2>{strings.name}</h2>
                   </li>
                   <li class="mgd-sidebar__item">
-                  <button id="mgd-sideBaritem-save_button" onClick={()=>{downloadFileAtURL(PDF_URL)}}>Save My Resume</button>
+                  <button id="mgd-sideBaritem-save_button" onClick={()=>{downloadFileAtURL(PDF_URL)}}>{strings.download}</button>
                   </li>
                 </ul>
               </div>
@@ -43,9 +42,9 @@ function App() {
           </div>
           <div className='page-doc_content'>
             <div className='page-doc_content-image_list'>
-              <img src={page1} alt='page1' className='page-doc_content-pages' id='page1'></img>
+              <img src={images.page1} alt='page1' className='page-doc_content-pages' id='page1'></img>
               <div className='page-doc_content-page_break'></div>
-              <img src={page2} alt='page2' className='page-doc_content-pages' id='page2'></img>
+              <img src={images.page2} alt='page2' className='page-doc_content-pages' id='page2'></img>
             </div>
           </div>
         </div>
